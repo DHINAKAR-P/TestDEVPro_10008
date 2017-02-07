@@ -70,6 +70,55 @@ app.controller("ibmdata_Default_Activity", [ '$scope', '$rootScope', '$location'
 
 
 
+        $scope.create = function () {
+
+		  //this is where the start code goes
+
+
+		  //this is where the validate code goes
+
+
+		  //this is where the post code goes
+		  var deferred = $q.defer();
+		  $http.post(RestURL.baseURL+'/ibmdata_Default_Activity/create_Ibmdata', $scope.Ibmdata).success(function(response) {
+		  	 alert('Operation SaveIbmdata successful');
+		  	 deferred.resolve(response);
+		  }).error(function(err) {
+		  	 alert('You got' + err + 'error');
+		  	 deferred.reject(err);
+		  });
+
+		  //this is where the server response code goes
+
+
+		  //this is where the transition code goes
+
+		  //this is where the end code goes 
+
+
+
+        };
+
+        $scope.cancel = function () {
+
+		  //this is where the start code goes
+
+
+		  //this is where the validate code goes
+
+
+		  //this is where the post code goes
+		   $window.history.back();
+
+		  //this is where the server response code goes
+
+
+
+
+
+        };
+
+
 
 }]);
 
